@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins";
+  height: 100vh;
+  background-color: #17a2b8;
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.alert {
+  font-size: 40px;
+  color: #17a2b8;
+  background-color: white;
+  border-radius: 12px;
+  padding: 15px 40px;
+  border: none;
+  outline: none;
+  font-weight: 600;
+}
+
+.box .result {
+  height: 250px;
+  width: 250px;
+  border: 7px solid white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 70px;
+  font-weight: 600;
+  margin: auto;
+  margin-bottom: 60px;
+}
+
+.detail {
+  display: flex;
+}
+
+.card {
+  width: 300px;
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 20px;
+}
+
+.card p {
+  padding: 10px;
+  text-align: center;
+  color: black;
+  font-size: 20px;
+}
+
+.card p:first-child {
+  background: #78c0c9;
+  color: white;
+}
+
+.hide {
+  display: none;
+}
