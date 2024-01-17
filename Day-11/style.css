@@ -1,0 +1,146 @@
+:root {
+  --success: rgb(0, 128, 0);
+  --warning: rgb(255, 165, 0);
+  --error: rgb(244, 16, 16);
+
+  --success-light: rgba(0, 128, 0, 0.4);
+  --warning-light: rgba(255, 165, 0, 0.4);
+  --error-light: rgba(244, 16, 16, 0.4);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.control button {
+  padding: 12px 18px;
+  border-radius: 3px;
+  border: none;
+  outline: none;
+  color: white;
+  margin: 0 10px;
+  font-size: 28px;
+}
+
+button.success {
+  background-color: var(--success);
+}
+
+button.warning {
+  background-color: var(--warning);
+}
+
+button.error {
+  background-color: var(--error);
+}
+
+#toasts {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+}
+
+.toast {
+  padding: 20px;
+  display: flex;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-size: 25px;
+  align-items: center;
+  margin-bottom: 10px;
+  animation: slide-show 2s ease forwards;
+}
+
+@keyframes slide-show {
+  0% {
+    transform: translateX(100%);
+  }
+
+  25% {
+    transform: translateX(-10px);
+  }
+
+  50% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-10px);
+  }
+}
+
+@keyframes slide-hide {
+  0% {
+    transform: translateX(0%);
+  }
+
+  25% {
+    transform: translateX(-10px);
+  }
+
+  50% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(200%);
+  }
+}
+
+.toast .countdown {
+  height: 4px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  animation: countdown 3s ease;
+}
+
+@keyframes countdown {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 0%;
+  }
+}
+
+.toast.success {
+  background-color: var(--success-light);
+  border-left: 6px solid var(--success);
+}
+
+.toast.error {
+  background-color: var(--error-light);
+  border-left: 6px solid var(--error);
+}
+
+.toast.warning {
+  background-color: var(--warning-light);
+  border-left: 6px solid var(--warning);
+}
+
+.toast.success .countdown {
+  background-color: var(--success);
+}
+
+.toast.error .countdown {
+  background-color: var(--error);
+}
+
+.toast.warning .countdown {
+  background-color: var(--warning);
+}
+
+.toast i {
+  margin-right: 25px;
+}

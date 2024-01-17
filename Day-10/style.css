@@ -68,3 +68,23 @@ li.completed {
 li.completed span {
   text-decoration: line-through;
 }
+
+.circle {
+  width: 40px;
+  height: 40px;
+  border: 5px solid;
+  border-top-color: rgba(255, 255, 255, 1);
+  border-right-color: rgba(255, 255, 255, 0.8);
+  border-bottom-color: rgba(255, 255, 255, 0.6);
+  border-left-color: rgba(255, 255, 255, 0.4);
+  border-radius: 50%;
+  position: absolute;
+  left: 20px;
+  animation: circle-loading 1s infinite linear;
+}
+
+@keyframes circle-loading {
+  to {
+    transform: rotate(360deg);
+  }
+}
