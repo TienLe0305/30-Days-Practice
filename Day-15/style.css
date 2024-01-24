@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto";
+}
+
+body {
+  height: 100vh;
+  background: #dadada;
+}
+
+.container {
+  width: 500px;
+  height: 600px;
+  background: white;
+  border-radius: 10px;
+  margin: 50px auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  padding: 10px 20px;
+  text-align: center;
+}
+
+.container h1 {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.search {
+  border: 1px solid black;
+  display: flex;
+  justify-content: flex-start;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.search input {
+  width: 100%;
+  border: none;
+  outline: none;
+}
+
+.search i {
+  color: #333;
+  padding: 5px;
+}
+
+.products {
+  margin-top: 15px;
+  width: 100%;
+  overflow-y: auto;
+  max-height: 450px;
+}
+
+.product {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-bottom: 10px;
+  padding: 8px 20px;
+  height: 100px;
+}
+
+.info {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 15px;
+  height: 100%;
+}
+
+.product img {
+  width: 50px;
+  object-fit: cover;
+  object-position: center;
+  margin-right: 20px;
+}
+
+.product h4 {
+  font-size: 15px;
+  color: #333;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.info .name {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.product:hover {
+  background: #dadada;
+}
+
+.hide {
+  display: none;
+}
