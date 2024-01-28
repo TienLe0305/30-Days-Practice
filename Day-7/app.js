@@ -12,6 +12,7 @@ function showError(input, message) {
 }
 
 function showSuccess(input, message) {
+  console.log(input);
   let parent = input.parentElement;
   let small = parent.querySelector("small");
   parent.classList.remove("error");
