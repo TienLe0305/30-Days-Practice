@@ -1,0 +1,50 @@
+:root {
+  --primary-color: #96ee1c;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background: black;
+  font-family: monospace;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.typing-wrapper p {
+  color: var(--primary-color);
+  font-weight: bold;
+  font-weight: 700;
+  font-size: 70px;
+  text-shadow: 0 0 100px var(--primary-color);
+  /* animation: typing 4s steps(35) infinite, blink 1s infinite; */
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+@keyframes typing {
+  0%,
+  100% {
+    width: 0%;
+  }
+  80% {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    border-right: 10px solid var(--primary-color);
+  }
+  50% {
+    border-right: 10px solid transparent;
+  }
+}
