@@ -1,0 +1,89 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: 0.5s;
+}
+
+body {
+  --primary-color: rgb(94, 94, 196);
+  --background-color: #eee;
+  --background-box: #dadada;
+  --color-box: #333;
+  --sw-color: #aaa;
+  background: var(--background-color);
+  font-family: sans-serif;
+}
+
+body.dark {
+  --primary-color: #4daf54;
+  --background-color: #2d2c2d;
+  --background-box: #3b3b3b;
+  --color-box: #f6f0f0;
+  --sw-color: #3ace44;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 50px;
+  color: var(--primary-color);
+  text-align: center;
+}
+
+h1.title {
+  margin-top: 100px;
+}
+
+.switch-wp {
+  background: var(--sw-color);
+  width: 80px;
+  border-radius: 20px;
+}
+
+.switch-wp label {
+  width: 30px;
+  height: 30px;
+  background: white;
+  border-radius: 50%;
+  display: block;
+  transition: 0.5s;
+}
+
+.switch-wp input:checked + label {
+  margin-left: 80px;
+  transform: translateX(-100%);
+}
+
+.box {
+  margin: 20px 0;
+  color: var(--color-box);
+  background: var(--background-box);
+  padding: 40px;
+}
+
+.lst-btn {
+  display: flex;
+  justify-content: space-around;
+}
+
+.lst-btn button {
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  color: #dadada;
+  background-color: var(--primary-color);
+  margin-top: 10px;
+}
