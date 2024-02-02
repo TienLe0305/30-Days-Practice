@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background: #dadada;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.zoomer img {
+  width: 500px;
+  height: 500px;
+  object-fit: cover;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+  margin: 0 100px;
+  cursor: zoom-in;
+}
+
+#mirror {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-image: url("./bike1.jpg");
+  position: fixed;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+}
+
+.hide {
+  display: none;
+}
