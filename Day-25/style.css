@@ -1,0 +1,59 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(145deg, #7c1599, #7e4ae8);
+}
+
+.control {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent);
+  color: white;
+  transform: translateY(100%);
+}
+
+.player {
+  width: 500px;
+  position: relative;
+  overflow: hidden;
+}
+
+video {
+  width: 100%;
+  height: 100%;
+}
+.player:hover .control {
+  transform: unset;
+  transition: 0.25s;
+}
+
+.control > * {
+  margin: 0 2px;
+}
+
+.control .progress {
+  background: white;
+  height: 5px;
+  position: relative;
+  flex: 1;
+}
+
+.control .progress-filled {
+  background: red;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
