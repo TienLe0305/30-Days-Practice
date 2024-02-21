@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
+
+:root {
+  --facebook-color: #3b5999;
+  --instagram-color: #e1306c;
+  --youtube-color: #de463b;
+  --twitter-color: #46c1f6;
+  --github-color: #333;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background: #dadada;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon {
+  width: 60px;
+  height: 60px;
+  background: white;
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  position: relative;
+  cursor: pointer;
+  margin: 0 20px;
+}
+
+.tooltip {
+  position: absolute;
+  background: var(--facebook-color);
+  padding: 0 30px;
+  height: 50px;
+  line-height: 50px;
+  border-radius: 25px;
+  color: white;
+  transition: all 0.25s;
+  opacity: 0;
+  top: 0;
+  pointer-events: none;
+}
+
+.tooltip::before {
+  content: "";
+  display: block;
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%) rotate(45deg);
+  background: var(--facebook-color);
+}
+
+.icon:hover {
+  background: var(--facebook-color);
+  color: white;
+}
+
+.icon:hover .tooltip {
+  top: -70px;
+  opacity: 1;
+}
+
+.facebook.icon:hover,
+.facebook .tooltip::before,
+.facebook .tooltip {
+  background: var(--facebook-color);
+}
+
+.github.icon:hover,
+.github .tooltip::before,
+.github .tooltip {
+  background: var(--github-color);
+}
+
+.twitter.icon:hover,
+.twitter .tooltip::before,
+.twitter .tooltip {
+  background: var(--twitter-color);
+}
+
+.instagram.icon:hover,
+.instagram .tooltip::before,
+.instagram .tooltip {
+  background: var(--instagram-color);
+}
+
+.youtube.icon:hover,
+.youtube .tooltip::before,
+.youtube .tooltip {
+  background: var(--youtube-color);
+}
